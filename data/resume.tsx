@@ -1,10 +1,10 @@
-import decodificadorSS from '../public/decodificadss-01.png'
 import { Icons } from '@/components/icons'
 
 import bikcraftSS1 from '../public/bikcraft-origamid-ss-01.png'
 import bikcraftSS2 from '../public/bikcraft-origamid-ss-02.png'
 import bikcraftSS3 from '../public/bikcraft-origamid-ss-03.png'
 import bikcraftSS4 from '../public/bikcraft-origamid-ss-04.png'
+import decodificadorSS from '../public/decodificador-de-texto-alura-ss-01.png'
 import pokedexSS from '../public/pokedex-ss-01.png'
 
 export const DATA = {
