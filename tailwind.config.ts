@@ -8,8 +8,17 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      xs: '475px',
+      sm: '641px',
+      md: '769px',
+      lg: '1025px',
+      xl: '1281px',
+      '2xl': '1537px',
+    },
     extend: {
       colors: {
+        'b-w-foreground': 'hsl(var(--b-w-foreground))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
