@@ -6,10 +6,17 @@ import { useEffect, useState } from 'react'
 
 import { Button } from '@/components/ui/button'
 import { Skeleton } from '@/components/ui/skeleton'
+import { dataAttr } from '@/lib/utils'
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
+  const [isClick, setIsClick] = useState(false)
+
+  function handleThemeChange() {
+    setIsClick(!isClick)
+    setTheme(theme === 'dark' ? 'light' : 'dark')
+  }
 
   useEffect(() => {
     setMounted(true)
@@ -23,12 +30,14 @@ export function ThemeToggle() {
     <Button
       variant={'outline'}
       size="icon"
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      aria-label="Toggle theme"
+      className="group relative overflow-hidden"
+      onClick={handleThemeChange}
+      aria-label="Mudar Tema"
+      data-state={dataAttr(isClick)}
     >
-      <Sun className="dark:-rotate-90 h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:scale-0" />
-      <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-      <span className="sr-only">Toggle theme</span>
+      <Sun className="group-data-[state=true]:-rotate-180 rotate-0 scale-100 transition-transform ease-in group-data-[state=true]:scale-0" />
+      <Moon className="absolute rotate-180 scale-0 transition-transform ease-in group-data-[state=true]:rotate-0 group-data-[state=true]:scale-100" />
+      <span className="sr-only">Mudar Tema</span>
     </Button>
   )
 }
