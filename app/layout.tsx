@@ -3,6 +3,7 @@ import { poppins, raleway } from '@/fonts/font'
 
 import '@/styles/globals.css'
 
+import { NavBar } from '@/components/navbar'
 import type { Metadata } from 'next'
 import { Provider } from './provider'
 
@@ -26,7 +27,12 @@ export default function RootLayout({
       className={`${poppins.variable} ${raleway.variable} scroll-smooth`}
     >
       <body className="antialiased">
-        <Provider>{children}</Provider>
+        <Provider>
+          <div className="mx-auto flex max-w-5xl flex-col gap-4 px-4 xs:px-8 py-4 xs:py-8">
+            <NavBar />
+            {children}
+          </div>
+        </Provider>
       </body>
     </html>
   )
