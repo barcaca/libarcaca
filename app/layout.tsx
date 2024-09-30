@@ -1,3 +1,4 @@
+import { Footer } from '@/components/footer'
 import { NavBar } from '@/components/navbar'
 import { DATA } from '@/data/resume'
 import { poppins, raleway } from '@/fonts/font'
@@ -6,7 +7,6 @@ import '@/styles/globals.css'
 
 import type { Metadata } from 'next'
 import { Provider } from './provider'
-import { Footer } from '@/components/footer'
 
 export const metadata: Metadata = {
   title: {
@@ -27,7 +27,7 @@ export default function RootLayout({
       // biome-ignore lint/nursery/useSortedClasses: <explanation>
       className={`${poppins.variable} ${raleway.variable} scroll-smooth`}
     >
-      <body className="antialiased">
+      <body className="bg-background antialiased">
         <Provider>
           <div className="mx-auto flex max-w-5xl flex-col gap-4 px-4 xs:px-8 py-4 xs:py-8">
             <NavBar />

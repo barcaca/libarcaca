@@ -33,11 +33,11 @@ export const DATA = {
       description:
         'Bikcraft é um projeto desenvolvido durante o curso da Origamid que apresenta uma plataforma para exibição de bicicletas elétricas, além de fornecer informações detalhadas sobre seguro, termos e orçamento, e inclui uma página de contato.',
       technologies: [
-        'Next.js',
-        'Typescript',
-        'TailwindCSS',
-        'Shadcn UI',
-        'Framer Motion',
+        { name: 'Next.js', icon: Icons.nextjs },
+        { name: 'Typescript', icon: Icons.typescript },
+        { name: 'TailwindCSS', icon: Icons.tailwindcss },
+        { name: 'Shadcn UI', icon: Icons.shadcn },
+        { name: 'Framer Motion', icon: Icons.framermotion },
       ],
       links: [
         {
