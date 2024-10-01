@@ -27,9 +27,9 @@ export default function RootLayout({
       // biome-ignore lint/nursery/useSortedClasses: <explanation>
       className={`${poppins.variable} ${raleway.variable} scroll-smooth`}
     >
-      <body className="bg-background antialiased">
+      <body className="flex min-h-screen w-full bg-background antialiased">
         <Provider>
-          <div className="mx-auto flex max-w-5xl flex-col gap-4 px-4 xs:px-8 py-4 xs:py-8">
+          <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 px-4 xs:px-8 py-4 xs:py-8">
             <NavBar />
             {children}
             <Footer />
