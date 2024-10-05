@@ -2,6 +2,7 @@ import { Tecnologys } from '@/components/tecnologys'
 import { buttonVariants } from '@/components/ui/button'
 import { DATA } from '@/data/resume'
 import { cn } from '@/lib/utils'
+import Image from 'next/image'
 import Link from 'next/link'
 import { FaArrowRight } from 'react-icons/fa6'
 
@@ -9,10 +10,12 @@ export function LastProject() {
   return (
     <section className="flex flex-col gap-4 md:h-80 md:flex-row">
       <div className="overflow-hidden rounded-md shadow-shape md:w-full md:max-w-52">
-        <img
+        <Image
           className="h-60 w-full object-cover object-top md:h-full"
           src={DATA.projects[0].images[0].src}
           alt="luan"
+          width={DATA.projects[0].images[0].width}
+          height={DATA.projects[0].images[0].height}
         />
       </div>
       <div className="flex items-center gap-2 rounded-md border border-border bg-card p-4 shadow-shape md:w-full">
@@ -28,7 +31,9 @@ export function LastProject() {
           </div>
           <div className="flex flex-col gap-2">
             <div className="flex flex-wrap items-center gap-4 ">
-              <Tecnologys items={DATA.projects[0].technologies.slice()} />
+              {DATA.projects[0].technologies.map(tech => (
+                <Tecnologys key={tech.name} item={tech} />
+              ))}
             </div>
             <Link
               href={DATA.projects[0].href}

@@ -4,15 +4,21 @@ import bikcraftSS1 from '../public/bikcraft-origamid-ss-01.png'
 import bikcraftSS2 from '../public/bikcraft-origamid-ss-02.png'
 import bikcraftSS3 from '../public/bikcraft-origamid-ss-03.png'
 import bikcraftSS4 from '../public/bikcraft-origamid-ss-04.png'
-import decodificadorSS from '../public/decodificador-de-texto-alura-ss-01.png'
-import pokedexSS from '../public/pokedex-ss-01.png'
+import bikcraftThumbnail from '../public/bikcraft-origamid-thumbnail.png'
+import decodificadorSS1 from '../public/decodificador-ss-01.png'
+import decodificadorThumbnail from '../public/decodificador-thumbnail.png'
+import pokedexSS1 from '../public/pokedex-ss-01.png'
+import pokedexSS2 from '../public/pokedex-ss-02.png'
+import pokedexThumbnail from '../public/pokedex-thumbnail.png'
+import taskflowSS1 from '../public/taskflow-ss-01.png'
+import taskflowSS2 from '../public/taskflow-ss-02.png'
+import taskflowThumbnail from '../public/taskflow-thumbnail.png'
 
 export const DATA = {
   name: 'Luan Barcaça',
   initials: 'LB',
   url: '#',
   location: 'São José dos Campos, SP',
-  // locationLink: "https://www.google.com/maps/place/sanfrancisco",
   description:
     'Novato no desenvolvimento front-end. Animado para explorar o mundo da programação e contribuir para projetos',
   about:
@@ -29,7 +35,6 @@ export const DATA = {
       href: 'https://github.com/barcaca/bikcraft-origamid-barcaca',
       type: 'Curso Prático',
       original: 'bikcraft-origamid',
-      active: true,
       description:
         'Bikcraft é um projeto desenvolvido durante o curso da Origamid que apresenta uma plataforma para exibição de bicicletas elétricas, além de fornecer informações detalhadas sobre seguro, termos e orçamento, e inclui uma página de contato.',
       technologies: [
@@ -51,7 +56,13 @@ export const DATA = {
           icon: Icons.gitHub,
         },
       ],
-      images: [bikcraftSS1, bikcraftSS2, bikcraftSS3, bikcraftSS4],
+      images: [
+        bikcraftThumbnail,
+        bikcraftSS1,
+        bikcraftSS2,
+        bikcraftSS3,
+        bikcraftSS4,
+      ],
     },
     {
       title: 'Pokedéx',
@@ -60,7 +71,12 @@ export const DATA = {
       type: 'Projeto Pessoal',
       description:
         'Este é um projeto de Pokédex que permite visualizar e pesquisar PokémonsEste é um projeto de Pokédex criado para aprender a consumir APIs, que permite visualizar e pesquisar Pokémons de forma interativa.',
-      technologies: ['Next.js', 'Typescript', 'TailwindCSS', 'Shadcn UI'],
+      technologies: [
+        { name: 'Next.js', icon: Icons.nextjs },
+        { name: 'Typescript', icon: Icons.typescript },
+        { name: 'TailwindCSS', icon: Icons.tailwindcss },
+        { name: 'Shadcn UI', icon: Icons.shadcn },
+      ],
       links: [
         {
           type: 'Website',
@@ -73,7 +89,7 @@ export const DATA = {
           icon: Icons.gitHub,
         },
       ],
-      images: [pokedexSS],
+      images: [pokedexThumbnail, pokedexSS1, pokedexSS2],
     },
     {
       title: 'TaskFlow',
@@ -83,12 +99,12 @@ export const DATA = {
       description:
         'TaskFlow é um projeto criado para aprendizagem sobre operações CRUD, permitindo criar, deletar e editar tarefas, além de gerenciar projetos e tags de forma eficiente.',
       technologies: [
-        'Next.js',
-        'Typescript',
-        'TailwindCSS',
-        'Shadcn UI',
-        'Prisma',
-        'Supabase',
+        { name: 'Next.js', icon: Icons.nextjs },
+        { name: 'Typescript', icon: Icons.typescript },
+        { name: 'TailwindCSS', icon: Icons.tailwindcss },
+        { name: 'Shadcn UI', icon: Icons.shadcn },
+        { name: 'Prisma', icon: Icons.prisma },
+        { name: 'Supabase', icon: Icons.supabase },
       ],
       links: [
         {
@@ -102,7 +118,7 @@ export const DATA = {
           icon: Icons.gitHub,
         },
       ],
-      images: [''],
+      images: [taskflowThumbnail, taskflowSS1, taskflowSS2],
     },
     {
       title: 'Decodificador de Texto Alura',
@@ -110,8 +126,12 @@ export const DATA = {
       original: 'decodificador-de-texto',
       type: 'Desafio',
       description:
-        'Este projeto é um simples decodificador de texto que permite a criptografia e descriptografia de mensagens usando regras de substituição específicas. Foi desenvolvido com HTML, CSS e JavaScript, onde o usuário pode inserir texto, criptografá-lo, descriptografá-lo e copiar o resultado para a área de transferência.',
-      technologies: ['HTML5', 'TailwindCSS', 'Javascript'],
+        'Este projeto é um simples decodificador de texto que permite a criptografia e descriptografia de mensagens usando regras de substituição específicas. Foi desenvolvido com HTML, CSS e JavaScript.',
+      technologies: [
+        { name: 'HTML5', icon: Icons.html },
+        { name: 'TailwindCSS', icon: Icons.tailwindcss },
+        { name: 'Javascript', icon: Icons.javascript },
+      ],
       links: [
         {
           type: 'Website',
@@ -124,7 +144,7 @@ export const DATA = {
           icon: Icons.gitHub,
         },
       ],
-      images: [decodificadorSS],
+      images: [decodificadorThumbnail, decodificadorSS1],
     },
   ],
-} as const
+}

@@ -25,14 +25,20 @@ const toolsList = [
 export function Skills() {
   return (
     <section className="flex flex-col gap-4 md:flex-row">
-      <div className="flex h-28 w-full flex-wrap items-center justify-center gap-x-8 gap-y-1 rounded-md border border-border bg-card p-2 shadow-shape">
-        <Tecnologys items={skillsList} />
+      <div className="flex h-28 w-full flex-wrap items-center justify-center gap-x-4 gap-y-1 rounded-md border border-border bg-card p-2 shadow-shape">
+        {skillsList.map(tech => (
+          <Tecnologys key={tech.name} item={tech} />
+        ))}
       </div>
-      <div className="flex h-28 w-full flex-wrap items-center justify-center gap-x-8 gap-y-1 rounded-md border border-border bg-card p-2 shadow-shape">
-        <Tecnologys items={learningList} />
+      <div className="flex h-28 w-full flex-wrap items-center justify-center gap-x-4 gap-y-1 rounded-md border border-border bg-card p-2 shadow-shape">
+        {learningList.map(tech => (
+          <Tecnologys key={tech.name} item={tech} />
+        ))}
       </div>
-      <div className="flex h-28 w-full flex-wrap items-center justify-center gap-x-8 gap-y-1 rounded-md border border-border bg-card p-2 shadow-shape">
-        <Tecnologys items={toolsList} />
+      <div className="flex h-28 w-full flex-wrap items-center justify-center gap-x-4 gap-y-1 rounded-md border border-border bg-card p-2 shadow-shape">
+        {toolsList.map(tech => (
+          <Tecnologys key={tech.name} item={tech} />
+        ))}
       </div>
     </section>
   )
