@@ -45,7 +45,6 @@ export function ProjectCard({ item }: ProjectCardProps) {
         <h2 className="text-2xl" id={`projetos-${item.title}`}>
           {item.title}
         </h2>
-        <p className="text-muted-foreground">{item.description}</p>
         <div className="flex gap-4">
           {item.technologies.map(tech => (
             <Tecnologys key={tech.name} item={tech} />
