@@ -6,6 +6,7 @@ import bikcraftSS3 from '../public/bikcraft-origamid-ss-03.png'
 import bikcraftSS4 from '../public/bikcraft-origamid-ss-04.png'
 import bikcraftThumbnail from '../public/bikcraft-origamid-thumbnail.png'
 import decodificadorSS1 from '../public/decodificador-ss-01.png'
+import decodificadorSS2 from '../public/decodificador-ss-02.png'
 import decodificadorThumbnail from '../public/decodificador-thumbnail.png'
 import pokedexSS1 from '../public/pokedex-ss-01.png'
 import pokedexSS2 from '../public/pokedex-ss-02.png'
@@ -36,7 +37,7 @@ export const DATA = {
       type: 'Curso Prático',
       original: 'bikcraft-origamid',
       description:
-        'Bikcraft é um projeto desenvolvido durante o curso da Origamid que apresenta uma plataforma para exibição de bicicletas elétricas, além de fornecer informações detalhadas sobre seguro, termos e orçamento, e inclui uma página de contato.',
+        'Bikcraft é um projeto desenvolvido durante o curso da Origamid, oferecendo uma plataforma completa para a exibição de bicicletas elétricas. A aplicação apresenta informações detalhadas sobre os modelos, além de seções dedicadas a seguro, termos e orçamento, tudo isso com uma interface moderna e fluida. O projeto também inclui uma página de contato totalmente funcional. No front-end, foram utilizadas tecnologias de ponta como Next.js, ShadCN UI, Tailwind CSS, TypeScript e animações elegantes com Framer Motion, proporcionando uma experiência visual atraente e responsiva.',
       technologies: [
         { name: 'Next.js', icon: Icons.nextjs },
         { name: 'Typescript', icon: Icons.typescript },
@@ -47,7 +48,7 @@ export const DATA = {
       links: [
         {
           type: 'Website',
-          href: 'bikcraft-origamid-barcaca.vercel.app',
+          href: 'https://bikcraft-origamid-barcaca.vercel.app',
           icon: Icons.globe,
         },
         {
@@ -70,7 +71,7 @@ export const DATA = {
       original: 'pokedex',
       type: 'Projeto Pessoal',
       description:
-        'Este é um projeto de Pokédex que permite visualizar e pesquisar PokémonsEste é um projeto de Pokédex criado para aprender a consumir APIs, que permite visualizar e pesquisar Pokémons de forma interativa.',
+        'Este projeto de Pokédex foi criado para fins de aprendizado sobre consumo de APIs, oferecendo uma experiência interativa para visualizar e pesquisar Pokémons. A interface intuitiva permite explorar informações detalhadas sobre cada Pokémon de forma dinâmica e rápida. O front-end é desenvolvido com Next.js, ShadCN UI, Tailwind CSS e TypeScript, garantindo performance e responsividade. Os dados são fornecidos pela PokeAPI, permitindo acesso a uma vasta gama de informações sobre os Pokémons.',
       technologies: [
         { name: 'Next.js', icon: Icons.nextjs },
         { name: 'Typescript', icon: Icons.typescript },
@@ -97,7 +98,7 @@ export const DATA = {
       original: 'taskflow',
       type: 'Projeto Pessoal',
       description:
-        'TaskFlow é um projeto criado para aprendizagem sobre operações CRUD, permitindo criar, deletar e editar tarefas, além de gerenciar projetos e tags de forma eficiente.',
+        'TaskFlow é uma solução completa para gestão de tarefas e projetos, desenvolvida com tecnologias modernas. Com ele, você pode criar, editar e excluir tarefas de forma prática, além de gerenciar projetos e organizar suas atividades usando tags personalizadas. O front-end é construído com Next.js, ShadCN UI, Tailwind CSS e TypeScript, garantindo uma interface dinâmica e responsiva. No back-end, utilizamos Prisma e Supabase para proporcionar um gerenciamento de dados eficiente e seguro.',
       technologies: [
         { name: 'Next.js', icon: Icons.nextjs },
         { name: 'Typescript', icon: Icons.typescript },
@@ -144,7 +145,7 @@ export const DATA = {
           icon: Icons.gitHub,
         },
       ],
-      images: [decodificadorThumbnail, decodificadorSS1],
+      images: [decodificadorThumbnail, decodificadorSS1, decodificadorSS2],
     },
   ],
 }
