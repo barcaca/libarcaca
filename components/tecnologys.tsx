@@ -1,3 +1,5 @@
+import { Motion } from './motion-wrapper'
+
 type IconProps = React.HTMLAttributes<SVGElement>
 
 export type Tech = {
@@ -9,9 +11,16 @@ interface TecnologysProps {
   item: Tech
 }
 
+const listAnima = {
+  hidden: { opacity: 0, scale: 0.7 },
+  show: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+}
+
 export function Tecnologys({ item }: TecnologysProps) {
   return (
-    <div
+    <Motion
+      type="div"
+      variants={listAnima}
       className="group relative rounded-md border border-border bg-muted p-1"
       aria-label={item.name}
     >
@@ -25,6 +34,6 @@ export function Tecnologys({ item }: TecnologysProps) {
         className="size-6 text-b-w-foreground lg:size-8"
         aria-hidden="true"
       />
-    </div>
+    </Motion>
   )
 }
