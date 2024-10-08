@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Portfólio Pessoal
+Este é um portfólio pessoal que apresenta meus projetos, habilidades e contato.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Indice
+- 🖼️ [Screenshot](#-#screenshot)
+- 🛠️ [Tecnologias](#-tecnologias)
+- 🏗️ [Funcionalidades](#-funcionalidades)
+- 🌐 [Páginas](#-páginas)
+- 🔗 [Links](#-links)
+- 🏆 [Conclusão](#-conclusão)
+- 📚 [Recursos úteis](#-recursos-úteis)
+- 👤 [Autor](#-autor)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🖼️ Screenshots
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![Desktop](/public/thumbanilSS.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## 🛠️ Tecnologias
 
-To learn more about Next.js, take a look at the following resources:
+**Front-end:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![NextJS](https://img.shields.io/badge/NextJS-%23000?style=for-the-badge&logo=nextdotjs&logoColor=%23fff)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+![ShadcnUi](https://img.shields.io/badge/ShadcnUi-%23000000?style=for-the-badge&logo=shadcnui&logoColor=%23fff)
 
-## Deploy on Vercel
+![TailwindCss](https://img.shields.io/badge/Tailwind-%2306B6D4?style=for-the-badge&logo=tailwindcss&logoColor=%23fff)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![Typescript](https://img.shields.io/badge/Typescript-%233178C6?style=for-the-badge&logo=typescript&logoColor=%23fff)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![Framer Motion](https://img.shields.io/badge/Framer%20Motion-%23000?style=for-the-badge&logo=framer&logoColor=%23fff)
+
+
+## 🏗️ Funcionalidades
+
+- Exibição de projetos de desenvolvimento web.
+- Informações sobre minhas habilidades.
+- Formulário de contato.
+- Interface responsiva e intuitiva, adaptada para dispositivos móveis.
+- Suporte a temas dark e light
+
+
+## 🌐 Páginas
+
+- Home: Página inicial com uma visão geral.
+- Projetos: Lista dos ultimos projetos.
+- ProjetoId: Detalhes específicos de um projeto.
+- Contato: Formulário para contato.
+
+
+## 🔗 Links
+
+- [Live Site URL](https://libarcaca.vercel.app)
+
+## 🏆 Conclusão
+
+Construir este projeto proporcionou diversos aprendizados, incluindo:
+
+-Utilização de Next.js para criação de aplicações web reativas e performáticas.
+
+-Estilização com Tailwind CSS para um desenvolvimento rápido e responsivo.
+
+## 📚 Recursos úteis
+
+- [Documentação do  **Next.js:**](https://nextjs.org/docs)
+- [Documentação do **Tailwind CSS**](https://tailwindcss.com/docs)
+- [Documentação do **TypeScript**](https://www.typescriptlang.org/docs/)
+- [Documentação do **Framer Motion**](https://www.framer.com/motion/)
+- [Documentação do **Shadcn UI**](https://ui.shadcn.com/docs)
+
+## 👤 Autor
+
+- [@barcaca](https://www.github.com/barcaca)
+
+
+
