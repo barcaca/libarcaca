@@ -6,6 +6,7 @@ import {
   type FormState,
   type TContactData,
 } from '@/actions/contact/send/schema'
+import { Motion } from '@/components/motion-wrapper'
 import { Button } from '@/components/ui/button'
 import {
   Form,
@@ -25,6 +26,17 @@ const defaultValues = {
   nameContact: '',
   emailContact: '',
   messageContact: '',
+}
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.5,
+      staggerChildren: 0.2,
+    },
+  },
 }
 
 export function FormContato() {
@@ -47,20 +59,52 @@ export function FormContato() {
     })
   }
 
+  const rightToLeft = {
+    hidden: { opacity: 0, x: 100 },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.5,
+        delay: 0.2,
+        ease: 'easeInOut',
+      },
+    },
+  }
+
+  const leftToRight = {
+    hidden: { opacity: 0, x: -100 },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.5,
+        delay: 0.2,
+        ease: 'easeInOut',
+      },
+    },
+  }
+
   return (
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSendContact)}
         className="mx-auto flex w-full max-w-screen-sm flex-col md:gap-4"
       >
-        <FormFieldItem name="nameContact" type="text" placeholder="Nome" />
-        <FormFieldItem name="emailContact" type="email" placeholder="Email" />
-        <FormFieldItem
-          name="messageContact"
-          type="text"
-          placeholder="Messagem"
-          isTextArea
-        />
+        <Motion type="div" variants={rightToLeft}>
+          <FormFieldItem name="nameContact" type="text" placeholder="Nome" />
+        </Motion>
+        <Motion type="div" variants={leftToRight}>
+          <FormFieldItem name="emailContact" type="email" placeholder="Email" />
+        </Motion>
+        <Motion type="div" variants={rightToLeft}>
+          <FormFieldItem
+            name="messageContact"
+            type="text"
+            placeholder="Messagem"
+            isTextArea
+          />
+        </Motion>
         <Button
           type="submit"
           className="mt-2 h-14 w-full p-4 text-base uppercase"
