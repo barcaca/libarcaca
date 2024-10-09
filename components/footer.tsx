@@ -25,6 +25,8 @@ export function Footer() {
             <Link
               key={social.name}
               href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className={buttonVariants({ variant: 'outline', size: 'icon' })}
             >
               <social.icon className="size-6" />
