@@ -1,3 +1,4 @@
+import { Motion, MotionLink } from '@/components/motion-wrapper'
 import { Tecnologys } from '@/components/tecnologys'
 import { buttonVariants } from '@/components/ui/button'
 import {
@@ -10,8 +11,55 @@ import {
 import { DATA } from '@/data/resume'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
-import Link from 'next/link'
 import { notFound } from 'next/navigation'
+
+const titleAnimation = {
+  hidden: { opacity: 0, y: -100 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+}
+
+const descriptionAnimation = {
+  hidden: { opacity: 0, scale: 0.7 },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+}
+
+const linkVariants = {
+  hidden: {
+    opacity: 0,
+    y: 100,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.2,
+    },
+  },
+}
+
+const fadeIn = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      delayChildren: 0.2,
+      staggerChildren: 0.2,
+    },
+  },
+}
 
 export default function ProjectIdPage({
   params,
@@ -23,17 +71,34 @@ export default function ProjectIdPage({
   if (!projeto) {
     notFound()
   }
+
   return (
     <main className="grid gap-4">
-      <section className="gap-4 rounded-md border border-border p-4 lg:p-8">
-        <div className="flex flex-col items-center gap-4 text-center">
+      <Motion
+        type="section"
+        variants={fadeIn}
+        initial={'hidden'}
+        animate={'show'}
+        className="gap-4 overflow-hidden rounded-md border border-border p-4 lg:p-8"
+      >
+        <Motion
+          type="div"
+          variants={titleAnimation}
+          className="flex flex-col items-center gap-4 text-center"
+        >
           <h1 className="text-4xl uppercase md:text-4xl lg:text-5xl">
             {projeto.title}
           </h1>
           <h2>{projeto.type}</h2>
-        </div>
+        </Motion>
         <div className="flex flex-col gap-4 lg:gap-8">
-          <p className="text-muted-foreground">{projeto.description}</p>
+          <Motion
+            type="p"
+            variants={descriptionAnimation}
+            className="text-muted-foreground"
+          >
+            {projeto.description}
+          </Motion>
           <div className="flex flex-wrap items-center gap-4">
             {projeto.technologies.map(tech => (
               <Tecnologys key={tech.name} item={tech} />
@@ -42,9 +107,10 @@ export default function ProjectIdPage({
           <div className="flex items-center gap-4">
             {projeto.links.map(link => {
               return (
-                <Link
+                <MotionLink
                   key={link.type}
                   href={link.href}
+                  variants={linkVariants}
                   className={cn(
                     buttonVariants(),
                     'h-16 w-full max-w-40 gap-3 uppercase'
@@ -54,13 +120,19 @@ export default function ProjectIdPage({
                 >
                   {link.type === 'Website' ? 'Visite Aqui' : 'Github'}
                   <link.icon className="size-6" />
-                </Link>
+                </MotionLink>
               )
             })}
           </div>
         </div>
-      </section>
-      <section>
+      </Motion>
+      <Motion
+        type="section"
+        variants={fadeIn}
+        initial={'hidden'}
+        whileInView={'show'}
+        viewport={{ once: true, amount: 0.5 }}
+      >
         <Carousel>
           <CarouselContent>
             {projeto.images.map((image, i) => {
@@ -84,7 +156,7 @@ export default function ProjectIdPage({
           <CarouselPrevious className="left-2" />
           <CarouselNext className="right-2" />
         </Carousel>
-      </section>
+      </Motion>
     </main>
   )
 }
