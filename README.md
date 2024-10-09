@@ -15,7 +15,8 @@ Este é um portfólio pessoal que apresenta meus projetos, habilidades e contato
 
 ## 🖼️ Screenshots
 
-![Desktop](/public/thumbanilSS.png)
+![Dark Thumb](/public/thumbanil-dark.png)
+![Light Thumb](/public/thumbanil-light.png)
 
 
 ## 🛠️ Tecnologias
