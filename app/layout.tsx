@@ -27,6 +27,17 @@ export default function RootLayout({
       // biome-ignore lint/nursery/useSortedClasses: <explanation>
       className={`${poppins.variable} ${raleway.variable} scroll-smooth`}
     >
+      <head>
+        <noscript>
+          <style
+            // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+            dangerouslySetInnerHTML={{
+              __html:
+                '[style*="opacity:0"] { opacity: unset !important; transform: unset !important; }',
+            }}
+          />
+        </noscript>
+      </head>
       <body className="flex min-h-screen w-full bg-background antialiased">
         <Provider>
           <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 px-4 xs:px-8 py-4 xs:py-8">
