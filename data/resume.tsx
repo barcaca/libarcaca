@@ -11,6 +11,10 @@ import decodificadorThumbnail from '../public/decodificador-thumbnail.png'
 import pokedexSS1 from '../public/pokedex-ss-01.png'
 import pokedexSS2 from '../public/pokedex-ss-02.png'
 import pokedexThumbnail from '../public/pokedex-thumbnail.png'
+import recipeonSS1 from '../public/recipeon-ss-01.png'
+import recipeonSS2 from '../public/recipeon-ss-02.png'
+import recipeonSS3 from '../public/recipeon-ss-03.png'
+import recipeonThumbnail from '../public/recipeon-thumbnail.png'
 import taskflowSS1 from '../public/taskflow-ss-01.png'
 import taskflowSS2 from '../public/taskflow-ss-02.png'
 import taskflowThumbnail from '../public/taskflow-thumbnail.png'
@@ -31,6 +35,33 @@ export const DATA = {
   },
 
   projects: [
+    {
+      title: 'Recipeon',
+      href: 'https://github.com/barcaca/recipeon-next',
+      type: 'Curso Prático',
+      original: 'recipeon-next',
+      description:
+        'Recipeon é um projeto desenvolvido como parte de um desafio do OracleOne, inicialmente inspirado no conceito do AluraGeek. Trata-se de uma plataforma dedicada a receitas, permitindo visualização e criação de receitas. A aplicação apresenta interface onde os usuários podem explorar receitas detalhadas, ingredientes e modos de preparo, além de contar com funcionalidades para filtrar e buscar pratos pelo nome. O projeto foi concebido com um design exclusivo no Figma e implementado utilizando tecnologias de ponta, como Next.js, ShadCN UI, Tailwind CSS, e TypeScript. No back-end, foi utilizado o JSON Server para simular uma API funcional.',
+      technologies: [
+        { name: 'Next.js', icon: Icons.nextjs },
+        { name: 'Typescript', icon: Icons.typescript },
+        { name: 'TailwindCSS', icon: Icons.tailwindcss },
+        { name: 'Shadcn UI', icon: Icons.shadcn },
+      ],
+      links: [
+        {
+          type: 'Website',
+          href: 'https://recipeon-next.vercel.app',
+          icon: Icons.globe,
+        },
+        {
+          type: 'Source',
+          href: 'https://github.com/barcaca/recipeon-next',
+          icon: Icons.gitHub,
+        },
+      ],
+      images: [recipeonThumbnail, recipeonSS1, recipeonSS2, recipeonSS3],
+    },
     {
       title: 'Bikcraft Origamid',
       href: 'https://github.com/barcaca/bikcraft-origamid-barcaca',
