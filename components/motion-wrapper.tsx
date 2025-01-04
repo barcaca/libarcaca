@@ -26,5 +26,5 @@ export const Motion = <Tag extends keyof JSX.IntrinsicElements>({
   )
 }
 
-export const MotionLink = motion(Link)
+export const MotionLink = motion.create(Link)
 export const MotionImagem = motion(Image)
