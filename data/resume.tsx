@@ -1,23 +1,27 @@
 import { Icons } from '@/components/icons'
 
-import bikcraftSS1 from '../public/bikcraft-origamid-ss-01.png'
-import bikcraftSS2 from '../public/bikcraft-origamid-ss-02.png'
-import bikcraftSS3 from '../public/bikcraft-origamid-ss-03.png'
-import bikcraftSS4 from '../public/bikcraft-origamid-ss-04.png'
-import bikcraftThumbnail from '../public/bikcraft-origamid-thumbnail.png'
-import decodificadorSS1 from '../public/decodificador-ss-01.png'
-import decodificadorSS2 from '../public/decodificador-ss-02.png'
-import decodificadorThumbnail from '../public/decodificador-thumbnail.png'
-import pokedexSS1 from '../public/pokedex-ss-01.png'
-import pokedexSS2 from '../public/pokedex-ss-02.png'
-import pokedexThumbnail from '../public/pokedex-thumbnail.png'
-import recipeonSS1 from '../public/recipeon-ss-01.png'
-import recipeonSS2 from '../public/recipeon-ss-02.png'
-import recipeonSS3 from '../public/recipeon-ss-03.png'
-import recipeonThumbnail from '../public/recipeon-thumbnail.png'
-import taskflowSS1 from '../public/taskflow-ss-01.png'
-import taskflowSS2 from '../public/taskflow-ss-02.png'
-import taskflowThumbnail from '../public/taskflow-thumbnail.png'
+import bikcraftSS1 from '@/assets/image/bikcraft/bikcraft-origamid-ss-01.png'
+import bikcraftSS2 from '@/assets/image/bikcraft/bikcraft-origamid-ss-02.png'
+import bikcraftSS3 from '@/assets/image/bikcraft/bikcraft-origamid-ss-03.png'
+import bikcraftSS4 from '@/assets/image/bikcraft/bikcraft-origamid-ss-04.png'
+import bikcraftThumbnail from '@/assets/image/bikcraft/bikcraft-origamid-thumbnail.png'
+import decodificadorSS1 from '@/assets/image/decodificador/decodificador-ss-01.png'
+import decodificadorSS2 from '@/assets/image/decodificador/decodificador-ss-02.png'
+import decodificadorThumbnail from '@/assets/image/decodificador/decodificador-thumbnail.png'
+import destinationThumbnail from '@/assets/image/destination/destination-map-thumbnail.png'
+import destinationSS1 from '@/assets/image/destination/destination-ss-01.png'
+import destinationSS2 from '@/assets/image/destination/destination-ss-02.png'
+import destinationSS3 from '@/assets/image/destination/destination-ss-03.png'
+import pokedexSS1 from '@/assets/image/pokedex/pokedex-ss-01.png'
+import pokedexSS2 from '@/assets/image/pokedex/pokedex-ss-02.png'
+import pokedexThumbnail from '@/assets/image/pokedex/pokedex-thumbnail.png'
+import recipeonSS1 from '@/assets/image/recipeon/recipeon-ss-01.png'
+import recipeonSS2 from '@/assets/image/recipeon/recipeon-ss-02.png'
+import recipeonSS3 from '@/assets/image/recipeon/recipeon-ss-03.png'
+import recipeonThumbnail from '@/assets/image/recipeon/recipeon-thumbnail.png'
+import taskflowSS1 from '@/assets/image/taskflow/taskflow-ss-01.png'
+import taskflowSS2 from '@/assets/image/taskflow/taskflow-ss-02.png'
+import taskflowThumbnail from '@/assets/image/taskflow/taskflow-thumbnail.png'
 
 export const DATA = {
   name: 'Luan Barcaça',
@@ -35,6 +39,38 @@ export const DATA = {
   },
 
   projects: [
+    {
+      title: 'Destination Map',
+      href: 'https://github.com/barcaca/destination-map-nextjs',
+      type: 'Curso Prático',
+      original: 'destination-map-nextjs',
+      description:
+        'Destination Map é um projeto desenvolvido como parte de um desafio do OracleOne, inicialmente inspirado no conceito do AluraFlix. O projeto oferece uma experiência interativa , permitindo explorar, cadastrar e favoritar destinos de forma simples e intuitiva. Com uma interface moderna e funcional, os usuários podem registrar-se na plataforma, com os dados armazenados em cookies para personalizar a experiência. Após o login, é possível cadastrar novos destinos, detalhar informações como localização e atrativos, além de favoritar aqueles que mais gostaram. O projeto utiliza tecnologias modernas como Next.js, ShadCN UI, Tailwind CSS e TypeScript para a construção do front-end. No back-end, o JSON Server é usado para simular uma API, tornando o desenvolvimento ágil e eficiente.',
+      technologies: [
+        { name: 'Next.js', icon: Icons.nextjs },
+        { name: 'Typescript', icon: Icons.typescript },
+        { name: 'TailwindCSS', icon: Icons.tailwindcss },
+        { name: 'Shadcn UI', icon: Icons.shadcn },
+      ],
+      links: [
+        {
+          type: 'Website',
+          href: 'https://destination-map-nextjs.vercel.app',
+          icon: Icons.globe,
+        },
+        {
+          type: 'Source',
+          href: 'https://github.com/barcaca/destination-map-nextjs',
+          icon: Icons.gitHub,
+        },
+      ],
+      images: [
+        destinationThumbnail,
+        destinationSS1,
+        destinationSS2,
+        destinationSS3,
+      ],
+    },
     {
       title: 'Recipeon',
       href: 'https://github.com/barcaca/recipeon-next',
